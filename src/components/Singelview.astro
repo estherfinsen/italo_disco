@@ -1,0 +1,20 @@
+---
+const {data} = Astro.props;
+console.log(data);
+---
+
+<article class="singleview-grid">
+    <div class="imgwrapper">
+    <img src={`/${data.image}`} alt=""></img>
+      <div class="text-overlay">
+        <h3>{data.place}</h3>
+        <h2>{data.name}</h2>
+      </div>
+    </div>
+
+<div class="exhibit_information">
+        <h1> {data.artist} </h1>
+         <h3> {data.description} </h3>
+</div>
+</article>
+          

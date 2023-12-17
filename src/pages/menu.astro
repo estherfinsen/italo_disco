@@ -6,10 +6,54 @@ import Mainlayout from "../layouts/Mainlayout.astro";
 	<main>
 
 <div class="menu">
-    MENU <br> 
-     <div class="matsedill">
-        <img src="tekst.png" alt="Description of the photo">
+    MENU <br><br> 
+     <div class="texti_matsedill">
+		<br /> We only work with the finest ingredients, which we directly import from Italy, as well as plenty of fish and seafood primarily from Danish waters. We always make our pasta from scratch and serve it fresh every day.
+<br><br>
+Our food is simple and delicate, with a focus on perfect preparation and flavor, and we operate based on the philosophy of employing classic craftsmanship. We cook like mama would, adding a bit of extra sharpness and finesse.
+<br><br>
+ITALO DISCO is about taste, refinement, and rhythm. An idea to create a modern trattoria with a significant international influence on Vesterbro in Copenhagen.
     </div>
+	</div>
+	   <div class="matsedill">
+        <!-- First Headline: TUESDAY–SATURDAY -->
+        <div class="menu-section">
+            <div>
+                 <div id="headline"> THURSDAY - SATURDAY </div>
+                 <div class="menu-section"></div>
+                <strong> MENU </strong>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 500 DKK <br />
+                Varies from day to day, 8-9 servings<br /> <br />
+            </div>
+    
+            <div>
+             <strong> FRIDAY MENU </strong> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 500 DKK<br />
+                Traditionally, on Fridays, we serve fish and seafood<br />
+            </div>
+        </div>
+
+        <!-- Second Headline: SUNDAY -->
+        <div class="menu-section">
+            <div>
+                <div id="headline"> SUNDAY </div>
+                <div class="tekst_i_menu"></div>
+               <strong> MENU </strong>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 500 DKK<br />
+                A smaller menu composed with the philosophy of reducing food waste <br/> <br />
+            </div>
+            <div>
+                    <strong>SUNDAY PASTA </strong>  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 225 DKK
+                <br /> 
+                Including a glass of wine<br />
+            </div>
+        </div>
+               
+        <a href="tekst.png" target="" id="download-link">
+    <img src="path/to/your/thumbnail.jpg" alt="CLICK HERE TO DOWNLOAD MENU AS PDF">
+</a>
+
+
+
+</body>
+
 </div>
 
 	</main>
@@ -18,73 +62,205 @@ import Mainlayout from "../layouts/Mainlayout.astro";
 <style>
 
     body {
-        background-color: #F5F5F5;
+    background-image: url('blaeksprutte.svg'), url('appelsin.svg'), url('krappe.svg'), url('path/to/background4.jpg');
+    background-size: 25% 60%, 20% 33%, 10% 10%, 20% 20%;;
+    background-position: top left, top right, center, bottom right; /* Adjust these values based on your preferred positions */
+    background-repeat: no-repeat;
+    background-attachment:local;
+    height: 100%;
+    margin: 0; /* Remove default margin to ensure full coverage */
+}
+
+
+#download-link {
+    display: block;
+    margin: 5% auto; 
+    text-align: center; 
+    text-decoration: none;
+    color: #203ED8;
+    text-decoration: none;
+    padding: 10px;
+    transition: font-size 0.3s;
+    margin-left: 50%
+
+}
+
+
+/* You can adjust these styles based on your needs */
+.menu {
+    position: relative;
+    z-index: 1;
+}
+
+/* Other existing styles... */
+   body {
+            background-color: #F5F5F5;
+            font-family: "owners-text", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            background-color: #FFF7FE;
+        }
+
+        .video {
+            margin-left: 90px;
+            margin-right: 90px;
+            margin-top: 20px;
+        }
+
+        /* CSS Reset */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 800px) {
+            #videoweb {
+                display: none;
+                z-index: 1;
+            }
+        }
+
+        @media (min-width: 800px) {
+            #videmobil {
+                display: none;
+            }
+        }
+
+        #book {
+            display: flex;
+            position: absolute;
+            right: 30px;
+            /* Adjust the position as needed */
+            transition: transform 0.3s;
+            /* Add smooth transition effect for transform property */
+            bottom: 50px;
+            font-size: 20px;
+        }
+
+        #book a {
+            color: #203ED8;
+            text-decoration: none;
+            /* Remove underline from the link */
+            padding: 10px;
+            transition: font-size 0.3s;
+            /* Add smooth transition effect for font-size property */
+        }
+
+        #book:hover a {
+            font-size: 30px;
+            /* Change font size on hover */
+        }
+
+        .menu {
+            text-align: center;
+            /* Center text horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+            margin-left: 400px;
+            margin-right: 400px;
+            color: #EC5944;
+            font-weight: 800;
+            font-size: 30px;
+        }
+
+        .texti_matsedill {
+            color: #EC5944;
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        .matsedill {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+             margin-top: 70px;
+             margin-bottom: 100px;
+        }
+
+        .menu-section {
+            text-align: center;
+            color: #EC5944;
+            font-weight: 300;
+            font-size: 24px;
+            position: relative;
+            text-align: left;
+            margin-left: 90px;
+            margin-right: 30px;
+            gap: 10px;
+        }
+
+        .menu-section:not(:last-child) {
+            border-right: 1px solid #EC5944;
+            /* Thin line between sections */
+        }
+
+        .menu-item {
+            margin-top: 10px;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-item span {
+            margin-top: 5px;
+        }
+
+        .tekst_i_menu {
+            font-weight: 100;
+        }
+
+        #headline {
+ font-weight: 600;
+ margin: 30px;
+ margin-left: 100px;
+
+        }
+
+        /* Media query for smaller screens (max-width: 800px) */
+/* Media query for smaller screens (max-width: 800px) */
+/* Media query for smaller screens (max-width: 800px) */
+/* Media query for smaller screens (max-width: 800px) */
+@media (max-width: 800px) {
+    #videoweb {
+        display: none;
+        z-index: 1;
     }
-	.video {
-		margin-left: 90px;
-		margin-right: 90px;
-		margin-top: 20px;
-	}
 
-	/* CSS Reset */
-	body, h1, p, ul, li {
-		margin: 0;
-		padding: 0;
-	}
-
-	body {
-		font-family: "owners-text", sans-serif;
-		font-weight: 600;
-		font-style: normal;
-		background-color: #FFF7FE;
-	}
-
-	@media (max-width: 800px) {
-		#videoweb {
-			display: none;
-			z-index: 1;
-		}
-	}
-
-	@media (min-width: 800px) {
-		#videmobil {
-			display: none;
-		}
-	}
-
-	#book {
-		display: flex;
-		position: absolute;
-		right: 30px; /* Adjust the position as needed */
-		transition: transform 0.3s; /* Add smooth transition effect for transform property */
-		bottom: 50px;
-		font-size: 20px;
-	}
-
-	#book a {
-		color: #203ED8;
-		text-decoration: none; /* Remove underline from the link */
-		padding: 10px;
-		transition: font-size 0.3s; /* Add smooth transition effect for font-size property */
-	}
-
-	#book:hover a {
-		font-size: 30px; /* Change font size on hover */
-	}
+    #videmobil {
+        display: none;
+    }
 
     .menu {
-        text-align: center; /* Center text horizontally */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 40px;
-        margin-left: 120px;
-        margin-right: 120px;
-        color: ;
-        color: #EC5944;
-        font-weight: 400;
+        margin-left: 20px;
+        margin-right: 20px;
     }
-</style>
 
-</style>
+    #book {
+        right: 10px;
+        bottom: 10px;
+        font-size: 16px;
+    }
+
+    .matsedill {
+        grid-template-columns: 1fr; /* Set one fraction for each row */
+        margin-top: 20px; /* Adjust spacing as needed */
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; /* Change to a column layout */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .menu-section {
+        margin-left: 20px;
+        margin-right: 20px;
+        border-right: 1px solid #EC5944; /* Add a thin red line horizontally */
+        text-align: center; /* Center the text horizontally */
+    }
+
+    .menu-section: {
+        border-right: none; /* Remove the thin line from the last section */
+    }
+}

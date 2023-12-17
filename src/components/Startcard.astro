@@ -1,0 +1,21 @@
+---
+//const header = Astro.props.header;
+//onst text = Astro.props.text;
+//const picture = Astro.props.picture;
+//const product = Astro.props.picture;
+const {data} = Astro.props;
+console.log(data);
+---
+<article class="gallery-item">
+  <div class="imgwrapper">
+  <a href={`exhibit/${data.slug}`}>
+      <img src={`/${data.image}`} alt="">
+      <div class="text-overlay">
+        <h3>{data.place}</h3>
+        <h2>{data.name}</h2>
+      </div>
+    </div>
+  </a>
+</article>
+
+

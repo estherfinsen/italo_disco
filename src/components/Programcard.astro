@@ -1,0 +1,104 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
+  <div class="imgwrapper">
+  <a href="https://www.instagram.com/italodisco.cph?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer">
+    <img src={data.image} alt="">
+    <div class="text-overlay">
+      <img class="hover-icon" src="/instdraw.svg" alt="Hover Icon">
+    </div>
+  </a>
+</div>
+
+    </a>
+  </div>
+</article>
+
+<style>
+  .gallery-item {
+    display: grid;
+    grid-template-columns: 1fr; /* First item fills 1fr in column */
+    grid-template-rows: 1fr; /* First item fills 1fr in row */
+    gap: 0; /* No gap between items */
+    position: relative; 
+  }
+
+  .imgwrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  h2, h3 {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 0.8rem;
+  }
+
+  /* For the second item */
+  .gallery-item:nth-child(2) {
+    grid-template-columns: 2fr;
+  }
+
+  /* For the third item */
+  .gallery-item:nth-child(3) {
+    grid-template-rows: 2fr;
+  }
+
+  .gallery-item:nth-child(6) {
+    grid-template-rows: 2fr;
+  }
+  .text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.imgwrapper:hover .text-overlay {
+  opacity: 1; 
+}
+
+.hover-icon {
+  opacity: 0; 
+  width: 30%; /* Adjust the width to make it smaller (you can experiment with the percentage) */
+  max-width: 70px; /* Set a maximum width to prevent it from becoming too small */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Add any other styling you want for the icon */
+}
+
+.imgwrapper:hover .hover-icon {
+  opacity: 1; /* Show the icon on hover */
+}
+
+.imgwrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imgwrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio without cropping */
+  object-position: center; /* Center the image within the imgwrapper */
+}

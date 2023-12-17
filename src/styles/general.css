@@ -1,0 +1,60 @@
+/*****GENERELT***/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "owners-text", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #fff7fe;
+}
+
+.exhibits_grid {
+  grid-gap: 1.25rem;
+  margin: 6.5%;
+  display: grid;
+  gap: 10px;
+}
+
+.exhibits_grid article:nth-child(2) {
+  grid-column: span 2;
+}
+.exhibits_grid article {
+  transition: 0.7s ease;
+}
+.exhibits_grid article:hover {
+  opacity: 70%;
+}
+
+.exhibits_grid article:nth-child(4) {
+  grid-row: span 2;
+}
+
+.exhibits_grid article:nth-child(6) {
+  grid-column: span 2;
+}
+
+.exhibits_grid article:nth-child(7) {
+  grid-column: span 2;
+}
+.exhibits_grid article:nth-child(6) {
+  grid-row: span 2;
+}
+
+.exhibits_grid article:nth-child(10) {
+  grid-column: span 2;
+}
+
+.imgwrapper img {
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover; /* Fill the entire imgwrapper while maintaining aspect ratio */
+  object-position: center; /* Center the image within the imgwrapper */
+}
+img {
+  object-fit: cover;
+  width: 600px;
+}

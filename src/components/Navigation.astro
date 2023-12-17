@@ -1,0 +1,130 @@
+---
+---
+<script>
+  var burgerMenu = document.getElementById("burger-menu");
+
+var overlay = document.getElementById("menu");
+
+burgerMenu.addEventListener("click", function () {
+this.classList.toggle("close");
+overlay.classList.toggle("overlay");
+});
+</script>
+
+ <nav>
+         <li id="sidste"><a class="sider" href="/listeview">Gallery</a></li>
+
+<div class="logo">
+<a href="/"> <img src="italodiscologo.png" alt="img"></a>
+      </div>
+      <div id="burger-menu">
+          <span></span>
+      </div>
+
+      <div id="menu">
+        <ul>
+          
+              <li class="toforste"><a class="sider" href="/menu">Menu</a></li>
+              <li class="toforste"><a class="sider" href="/listeview">Booking</a></li>
+
+          </ul>
+      </div>
+     
+  </nav>
+
+
+  
+  <style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.logo img {
+width: 200px;
+margin-left:200px;
+}
+.logo {
+  display: inline-block;
+  vertical-align: middle; /* Add this line */
+  margin-top: 70px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  list-style: none;
+  background-image: url('markise.svg'); /* Replace 'navigation-background.jpg' with the path to your background image file */
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+  padding: 20px; /* Add padding to the navigation to make the text more readable */
+  margin-top: 0px;
+  text-transform: uppercase;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Reduce the z-index for the overlay */
+#menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  background: #cec828;
+  z-index: 1; /* Reduce the z-index for the overlay */
+}
+
+
+#burger-menu {
+  cursor: pointer;
+}
+
+#menu ul {
+  list-style: none;
+ display: flex;
+  
+}
+
+.toforste {
+  margin-right: 40px; 
+  margin-top: 70px;
+}
+
+ #sidste {
+  margin-left: 20px; /* Adjust the value as needed */
+  margin-right: 0;
+  margin-top: 70px;
+  color: 
+}
+
+#menu a {
+  text-decoration: none;
+ 
+}
+
+#menu a:hover {
+  color:red; 
+}
+nav a {
+  font-size: 16px; /* Adjust the font size as needed */
+  color: lightgrey;
+}
+
+/* If you want to apply the styles only to specific elements, you can use more specific selectors. For example: */
+
+nav .sider {
+  font-size: 20px; /* Adjust the font size as needed */
+  color: grey;
+  text-decoration: none;
+}
+
+#menu .sider:hover {
+  color: #EC5944;
+  }
+
+   #sidste .sider:hover {
+  color: #EC5944;
+  }

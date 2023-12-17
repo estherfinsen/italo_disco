@@ -1,0 +1,90 @@
+---
+import Mainlayout from "../layouts/Mainlayout.astro";
+---
+
+<Mainlayout title="Italo Disco">
+	<main>
+
+<div class="menu">
+    MENU <br> 
+     <div class="matsedill">
+        <img src="tekst.png" alt="Description of the photo">
+    </div>
+</div>
+
+	</main>
+</Mainlayout>
+
+<style>
+
+    body {
+        background-color: #F5F5F5;
+    }
+	.video {
+		margin-left: 90px;
+		margin-right: 90px;
+		margin-top: 20px;
+	}
+
+	/* CSS Reset */
+	body, h1, p, ul, li {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-family: "owners-text", sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		background-color: #FFF7FE;
+	}
+
+	@media (max-width: 800px) {
+		#videoweb {
+			display: none;
+			z-index: 1;
+		}
+	}
+
+	@media (min-width: 800px) {
+		#videmobil {
+			display: none;
+		}
+	}
+
+	#book {
+		display: flex;
+		position: absolute;
+		right: 30px; /* Adjust the position as needed */
+		transition: transform 0.3s; /* Add smooth transition effect for transform property */
+		bottom: 50px;
+		font-size: 20px;
+	}
+
+	#book a {
+		color: #203ED8;
+		text-decoration: none; /* Remove underline from the link */
+		padding: 10px;
+		transition: font-size 0.3s; /* Add smooth transition effect for font-size property */
+	}
+
+	#book:hover a {
+		font-size: 30px; /* Change font size on hover */
+	}
+
+    .menu {
+        text-align: center; /* Center text horizontally */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        margin-left: 120px;
+        margin-right: 120px;
+        color: ;
+        color: #EC5944;
+        font-weight: 400;
+    }
+</style>
+
+</style>
